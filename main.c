@@ -1,3 +1,9 @@
+// Patrick Celedio
+// main.c 
+// A program that demonstrates the input-output functionality of C.
+// It can take in a string, save it, display it, save it to a .txt file, and 
+// even load more strings from .txt files....... WOW.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

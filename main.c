@@ -125,12 +125,6 @@ void clearConsole(){
 }
 
 //
-// Exit program
-// 
-void exitProgram(){
-    return 0;
-}
-//
 // Self-explanatory; user has to hit enter to proceed
 //
 void UserPressEnter(){
@@ -324,8 +318,9 @@ void showMenu(int menuChoice){
 
             break;
         case 7:
-            printf("\nProgram exit.\n");
-            break;
+            clearConsole();
+            printf("\nProgram exit. Have a nice day.\n");
+            exit(0);
         default:
             printf("\nYou entered an invalid selection. Try again. \n");
             break;

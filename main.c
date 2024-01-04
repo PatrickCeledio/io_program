@@ -9,6 +9,8 @@
 #include <string.h>
 #include <ctype.h>
 #include <dirent.h>
+#include <unistd.h>
+#include <io.h>
 
 #define DEBUG 0
 
@@ -283,23 +285,25 @@ void showMenu(int menuChoice){
                  // Reset the file pointer to the beginning
                 fseek(opened_Scrambled_File, 0, SEEK_SET);
                 if (fgets(buffer, sizeof(buffer), opened_Scrambled_File) != NULL) {
-                    caesarCipher(buffer, 3); // Scramble text using a Caesar cipher with a shift of 3
-                    fseek(opened_Scrambled_File, -strlen(buffer), SEEK_CUR); // Move the file pointer back
-                    fputs(buffer, opened_Scrambled_File); // Overwrite the original content
-                }else{
-                    printf("Text scrambled and saved.\n");
-                    UserPressEnter();
+                    caesarCipher(buffer, 3); // Scramble text
+                    fseek(opened_Scrambled_File, 0, SEEK_SET); // Reset to start of file
+                    fputs(buffer, opened_Scrambled_File); // Overwrite content
+                    fflush(opened_Scrambled_File); // Flush changes
+                    // If scrambled text is shorter, truncate the file
+                    ftruncate(fileno(opened_Scrambled_File), strlen(buffer));
+                }
 
+                fclose(opened_Scrambled_File); // Close and reopen for reading
+                opened_Scrambled_File = fopen(scramble_File, "r");
+                if (opened_Scrambled_File != NULL) {
                     printf("Contents of %s:\n ", scramble_File);
                     while((ch = fgetc(opened_Scrambled_File)) != EOF){
                         putchar(ch);
                     }
-
                     fclose(opened_Scrambled_File);
+                } else {
+                    perror("ERROR: Unable to reopen file.");
                 }
-
-
-
             }
 
             UserPressEnter();

@@ -282,6 +282,7 @@ void showMenu(int menuChoice){
                 char *result;
                 char ch;
                 printf("\nFile exist... starting scramble...\n");
+                
                  // Reset the file pointer to the beginning
                 fseek(opened_Scrambled_File, 0, SEEK_SET);
                 if (fgets(buffer, sizeof(buffer), opened_Scrambled_File) != NULL) {

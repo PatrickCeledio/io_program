@@ -12,6 +12,12 @@
 #include <unistd.h>
 #include <io.h>
 
+// // Windows IP Helper API
+// #include <iphlpapi.h>
+
+// // Windows Socket API
+// #include <winsock2.h>
+
 #define DEBUG 0
 
 /*
@@ -108,6 +114,8 @@ void getUserInput(){
 
     return ;
 }
+
+
 
 //
 // This clears the buffer for userInput
@@ -326,6 +334,15 @@ void showMenu(int menuChoice){
             clearConsole();
             printf("\nProgram exit. Have a nice day.\n");
             exit(0);
+        case 8:
+            debugCheckMenuUserInput(menuChoice);
+            debugCheckMenuUserInputType(menuChoice);
+
+            clearConsole();
+
+            printf("Display IP Address (Will only work on Windows for now)\n\n");
+
+            UserPressEnter();
         default:
             printf("\nYou entered an invalid selection. Try again. \n");
             break;

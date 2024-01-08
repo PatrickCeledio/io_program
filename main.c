@@ -396,6 +396,80 @@ void showMenu(int menuChoice){
 
             UserPressEnter();
             break;
+        case 10:
+debugCheckMenuUserInput(menuChoice);
+            debugCheckMenuUserInputType(menuChoice);
+
+            clearConsole();
+            printf("ChatGPT 4: Can you generate me ascii art of a cup of coffee; How about very detailed; with an ascii background too\n\n");
+
+            puts(
+                "                            (                      "
+                "           )     (                                 "
+                "       ___...(-------)-....___                     "
+                "       .-""       )    (         ""-.              "
+                "   .-'``'|-._             )         _.-|           "
+                "   /  .--.|   `""---...........---""`   |          "
+                "   ' /    j    .             .             .  l    "
+                "   `-._   `._.'           /          .'.-'  /      "
+                "        ```--. . , ; .--`           /    .-'       "
+                "               |   |            `..-'   /          "
+                "               |   |               `'  /           "
+                "               |   |                  (            "
+                "               |   |                  `.           "
+                "               |   |                     )         "
+                "               |   |              `..-'  )         "
+                "               |   |                  `.(          "
+                "               |   |                     )         "
+                "               |   |                      `.       "
+                "               |   |                        )      "
+                "                |   |                  `..-'  )    "
+                "               |   |                  `(/          "
+                "               |   |                     )         "
+                "               |   |                     (         "
+                "               |   |                      `.       "
+                "               |   |                        )      "
+                "               |   |                  `..-'  )     "
+                "               |   |                  `(/          "
+                "               |   |                     )         "
+                "               |   |                     (         "
+                "               |   |                      `.       "
+                "               |   |                        )      "
+                "               |   |                  `..-'  )     "
+                "               |   |                  `(/          "
+                "               |   |                     )         "
+                "               |   |                     (         "
+                "               |   |                      `.       "
+                "               |   |                        )      "
+                "               |   |                  `..-'  )     "
+                "               |   |                  `(/          "
+                "               |   |                     )         "
+                "               |   |                     (         "
+                "               |   |                      `.       "
+                "               |   |                        )      "
+                "               |   |                  `..-'  )     "
+                "               |   |                  `(/          "
+                "               |   |                     )         "
+                "               |   |                     (         "
+                "               |   |                      `.       "
+                "               |   |                        )      "
+                "               |   |                  `..-'  )     "
+                "               |   |                  `(/          "
+                "               |   |                     )         "
+                "               |   |                     (         "
+                "               |   |                      `.       "
+                "               |   |                        )      "
+                "               |   |                  `..-'  )     "
+                "               j   l                  `(/          "
+                "               `-._)                   )           "
+                "                   `---..___...---`                "
+                "                                                   "       
+
+            );
+
+            UserPressEnter();
+        
+            break;
         default:
             printf("\nYou entered an invalid selection. Try again. \n");
             break;

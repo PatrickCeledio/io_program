@@ -470,6 +470,12 @@ debugCheckMenuUserInput(menuChoice);
             UserPressEnter();
         
             break;
+        case 11: 
+            debugCheckMenuUserInputType(menuChoice);
+            clearConsole();
+            printf("1/8/24: I have an internet outage at my home this week. This sucks ass.\n");
+            UserPressEnter();
+            break;
         default:
             printf("\nYou entered an invalid selection. Try again. \n");
             break;

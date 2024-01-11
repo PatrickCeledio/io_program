@@ -475,6 +475,8 @@ debugCheckMenuUserInput(menuChoice);
             clearConsole();
             printf("1/8/24: I have an internet outage at my home this week. This sucks ass.\n");
             printf("1/9/24: Again.\n");
+            printf("1/10/24: It's fixed.\n");
+
             UserPressEnter();
             break;
         default:

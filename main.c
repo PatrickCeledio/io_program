@@ -480,6 +480,8 @@ debugCheckMenuUserInput(menuChoice);
             printf("1/9/24: Again.\n");
             printf("1/10/24: It's fixed.\n");
             printf("1/11/24: Lol"\n);
+            printf("1/11/24: Lol"\n);
+
 
             UserPressEnter();
             break;

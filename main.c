@@ -482,6 +482,7 @@ debugCheckMenuUserInput(menuChoice);
             printf("1/11/24: Lol"\n);
             printf("1/11/24: Lol"\n);
             printf("Another one."\n);
+            printf("This is getting ridiculous."\n);
 
 
             UserPressEnter();

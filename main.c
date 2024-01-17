@@ -483,7 +483,6 @@ debugCheckMenuUserInput(menuChoice);
             printf("1/11/24: Lol"\n);
             printf("Another one."\n);
             printf("This is getting ridiculous."\n);
-            printf("I really cannot wait until my gf leaves so i can just focus and deep dive into a new project"\n);
 
 
             UserPressEnter();
